@@ -1,3 +1,4 @@
+// const lib = require('../src')
 
 function orderList() {
 
@@ -5,6 +6,7 @@ function orderList() {
   const idList = {};
 
   function sum(row, total = 0) {
+    // return lib.sum(row.action, total, row.price * 1)
     const price = row.price * 1;
     return row.action === 'order' ? total + price : total - price
   }
@@ -21,7 +23,8 @@ function orderList() {
       const orderId = row.order_id * 1
       const add = {
         email_id: Buffer.from(row.email).toString('base64'),
-        order_id: orderId * 1,
+        // email_id: lib.encodeEmailBase64(row.email),
+        order_id: orderId,
         items: addItem([], row.item_id),
         total: sum(row),
       }

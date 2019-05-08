@@ -6,6 +6,8 @@
   "scripts": {
     "test": "mocha ./unit/*",
     "startdev": "NODE_ENV=develop node index.js",
+    "startgodev": "NODE_ENV=develop node indexgo.js",
+    "build": "node-gyp configure build",
     "start": "node index.js"
   },
   "dependencies": {
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
-    "mocha": "6.1.4"
+    "mocha": "6.1.4",
+    "node-gyp": "^4.0.0"
   }
 }
