@@ -29,7 +29,6 @@ app.get('/load', (request, response) => {
         .on('end', () => {
 
             const results = JSON.parse(lib.toJson())
-            console.log(results[0])
             lib.flush()
 
             if (process.env.NODE_ENV === 'develop') {

@@ -1,5 +1,5 @@
 #include <node.h>
-#include "../golib.h"
+#include "./golang/golib.h"
 
 namespace golib {
 

@@ -1,5 +1,6 @@
 node_modules
 build
-golib*
+golib.h
+golib.so
 test
 public
