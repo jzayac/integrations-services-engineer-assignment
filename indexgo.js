@@ -2,8 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require('path')
-// const fileUrl = `https://storage.googleapis.com/exp-framework.appspot.com/orders.csv`
-const fileUrl = `http://localhost:3000/orders.csv`
+const fileUrl = `https://storage.googleapis.com/exp-framework.appspot.com/orders.csv`
 const axios = require('axios')
 const csv = require('csv-parser')
 const { Parser } = require('json2csv');
@@ -58,9 +57,5 @@ app.get('/load', (request, response) => {
 		/* DO NOT MODIFY BELOW */
     }).catch(err => console.log(err));
 })
-
-
-app.use(express.static('public'))
-
 
 app.listen(port, () => console.log(`App listening on port http://localhost:${port}`))
