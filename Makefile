@@ -1,7 +1,7 @@
 default: build
 
 compile-go:
-	go build -buildmode=c-shared -o golib.so src/golang/golib.go
+	go build -buildmode=c-shared -o src/golang/golib.so src/golang/golib.go
 
 compile-go-with-docker:
 	docker build -t exptest/golang .
